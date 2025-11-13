@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Login successfully!</h2><br>
+    <p>Would you like to go to the registration form?</p>
+
+    <div class="mt-4">
+        <a href="{% url 'register' %}" class="btn btn-success mx-2">Yes</a>
+        <a href="{% url 'login_view' %}" class="btn btn-danger mx-2">No</a>
+    </div>
+</div>
+{% endblock %}

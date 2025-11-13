@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions List</title>
+</head>
+<body>
+    <h1>All Transactions</h1>
+    <ul>
+        {% for t in transactions %}
+            <li>{{ t.transaction_types }} — {{ t.transaction_date }}</li>
+        {% empty %}
+            <li>No transactions found.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'transaction_create' %}">Create new transaction</a></p>
+    <p><a href="{% url 'home' %}">Home</a></p>
+</body>
+</html>
